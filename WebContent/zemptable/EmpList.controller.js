@@ -10,6 +10,14 @@ sap.ui.controller("zemptable.EmpList", {
 		var oModel = new sap.ui.model.json.JSONModel();
 		oModel.loadData("model/employeeInfo.json");
 		this.getView().setModel(oModel);
+		
+		
+		sap.ui.localResources("i18n");
+		var ormodel = new sap.ui.model.resource.ResourceModel({
+			bundleName : 'i18n.mySource'
+		});
+		
+		this.getView().setModel(ormodel, "m2");
 
 	},
 
